@@ -1,0 +1,5 @@
+{
+    "name": "ring_countdown",
+    "type": "drupal-module",
+    "description": "Animated SVG countdown timer in a custom block"
+}

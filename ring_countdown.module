@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains ring_countdown.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function ring_countdown_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the ring_countdown module.
+    case 'help.page.ring_countdown':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Animated SVG countdown timer in a block') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Block theme hook.
+ */
+function ring_countdown_theme($existing, $type, $theme, $path) {
+  return [
+    'ring_countdown_block' => [
+      'variables' => [
+        'end_time' => '',
+      ],
+    ],
+  ];
+}

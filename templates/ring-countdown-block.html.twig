@@ -1,0 +1,102 @@
+<div{{ attributes.addClass('ring-countdown') }} data-end-time="{{ end_time }}">
+  <svg
+   class="progress-ring progress-ring--days"
+   width="120"
+   height="120">
+    <circle
+      class="progress-ring__total"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="transparent"
+      r="43%"
+      cx="50%"
+      cy="50%"/>
+    <circle
+      class="progress-ring__progress"
+      stroke-width="4"
+      fill="transparent"
+      r="43%"
+      cx="50%"
+      cy="50%"/>
+    <g class="time" fill="currentColor">
+      <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" class="value"></text>
+      <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" class="desc">{{ 'days'|t }} </text>
+    </g>
+  </svg>
+
+  <svg
+   class="progress-ring progress-ring--hours"
+   width="120"
+   height="120">
+    <circle
+      class="progress-ring__total"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="transparent"
+      r="43%"
+      cx="50%"
+      cy="50%"/>
+    <circle
+      class="progress-ring__progress"
+      stroke-width="4"
+      fill="transparent"
+      r="43%"
+      cx="50%"
+      cy="50%"/>
+    <g class="time" fill="currentColor">
+      <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" class="value"></text>
+      <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" class="desc">{{ 'hours'|t }}</text>
+    </g>
+  </svg>
+
+  <svg
+   class="progress-ring progress-ring--minutes"
+   width="120"
+   height="120">
+    <circle
+      class="progress-ring__total"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="transparent"
+      r="43%"
+      cx="50%"
+      cy="50%"/>
+    <circle
+      class="progress-ring__progress"
+      stroke-width="4"
+      fill="transparent"
+      r="43%"
+      cx="50%"
+      cy="50%"/>
+    <g class="time" fill="currentColor">
+      <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" class="value"></text>
+      <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" class="desc">{{ 'min'|t }}</text>
+    </g>
+  </svg>
+
+  <svg
+   class="progress-ring progress-ring--seconds"
+   width="120"
+   height="120">
+    <circle
+      class="progress-ring__total"
+      stroke-width="2"
+      stroke="currentColor"
+      fill="transparent"
+      r="43%"
+      cx="50%"
+      cy="50%"/>
+    <circle
+      class="progress-ring__progress"
+      stroke="currentColor"
+      stroke-width="4"
+      fill="transparent"
+      r="43%"
+      cx="50%"
+      cy="50%"/>
+    <g class="time" fill="currentColor">
+      <text x="50%" y="45%" dominant-baseline="middle" text-anchor="middle" class="value"></text>
+      <text x="50%" y="65%" dominant-baseline="middle" text-anchor="middle" class="desc">{{ 'sec'|t }}</text>
+    </g>
+  </svg>
+</div>
