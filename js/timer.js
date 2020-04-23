@@ -5,17 +5,11 @@
     NodeList.prototype.forEach = Array.prototype.forEach;
   }
 
-  function initCircle(circle) {
-    var radius = circle.r.baseVal.value;
-    var circumference = radius * 2 * Math.PI;
-    circle.style.strokeDasharray = `${circumference} ${circumference}`;
-    circle.style.strokeDashoffset = `${circumference}`;
-  }
-
   function setProgress(circle, prop) {
     var radius = circle.r.baseVal.value;
     var circumference = radius * 2 * Math.PI;
     var offset = circumference - prop * circumference;
+    circle.style.strokeDasharray = `${circumference} ${circumference}`;
     circle.style.strokeDashoffset = offset;
   }
 
@@ -54,9 +48,6 @@
   }
 
   document.querySelectorAll('.ring-countdown').forEach(function(el) {
-    el.querySelectorAll('.progress-ring__progress').forEach(function (circle) {
-      initCircle(circle);
-    });
     updateTimer(el);
     window.setInterval(function() { 
       updateTimer(el);
